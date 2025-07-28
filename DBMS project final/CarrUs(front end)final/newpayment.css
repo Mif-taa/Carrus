@@ -1,0 +1,102 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #307C51;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.navbar-logo img {
+    height: 50px;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-links li {
+    display: inline;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+    transition: background 0.3s;
+}
+
+.navbar-links a:hover {
+    background-color: #20562A;
+    border-radius: 5px;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Dropdown Menu */
+.menu {
+    display: none;
+    flex-direction: column;
+    background-color: #20562A;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s;
+}
+.menu.active {
+    display: block;
+}
+
+.menu a:hover {
+    background-color: #20562A;
+    border-radius: 5px;
+}
+
+
+.container h2 {
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #20562A;
+    margin-bottom: 15px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-control, .form-select {
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.btn-success {
+    background-color: #20562A;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background-color: #16873d;
+}
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./demo.css">
+    <link rel="stylesheet" href="./reviewform.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Review</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-logo ps-3 m-2">
+            <img src="./logo2.png" alt="Car Rental Logo" class="logo-image">
+        </div>
+        <ul class="navbar-links" id="primary-navigation">
+            <li><a href="./home.html">Home</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Section with Flexbox layout -->
+    <section class="container d-flex justify-content-between">
+        <!-- Left Side: Review Form -->
+        <div class="form-container">
+            <form class="form" id="review-form" onsubmit="submitReview(event)">
+                <textarea class="textarea" name="review" id="review-text" placeholder="Add your review here" required></textarea>
+                <!-- Rating Section -->
+                <div class="rating" style="text-align: center; margin: 10px 0;">
+                    <label for="rating" style="display: block; font-weight: bold;">Rate Us:</label>
+                    <select id="rating" name="rating" class="input" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="5">5 - Excellent</option>
+                        <option value="4">4 - Good</option>
+                        <option value="3">3 - Average</option>
+                        <option value="2">2 - Poor</option>
+                        <option value="1">1 - Very Poor</option>
+                    </select>
+                </div>
+                <div style="text-align: center;">
+                    <button class="button" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Right Side: Reviews Slideshow -->
+        <div class="reviews-container">
+            <h2>Users Review</h2>
+            <div id="reviews-slider" class="reviews-slider">
+                <div id="reviews-container"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="review.js"></script>
+    <script>
+        let currentReviewIndex = 0;
+        let reviews = [];
+
+        function loadReviews() {
+            fetch("http://localhost:8080/api/reviews/all")
+                .then(response => response.json())
+                .then(data => {
+                    reviews = data;
+                    displayReview(currentReviewIndex);
+                })
+                .catch(error => {
+                    console.error("Error loading reviews:", error);
+                });
+        }
+
+        function displayReview(index) {
+            const reviewsContainer = document.getElementById("reviews-container");
+            reviewsContainer.innerHTML = ''; // Clear existing reviews
+
+            const review = reviews[index];
+            const reviewElement = document.createElement("div");
+            reviewElement.className = "review";
+            reviewElement.innerHTML = `
+                <p><strong>Reviewer ID:</strong> ${review.userId}</p>
+                <p><strong>Rating:</strong> ${review.rating}</p>
+                <p><strong>Review:</strong> ${review.reviewText}</p>
+                <hr>
+            `;
+            reviewsContainer.appendChild(reviewElement);
+        }
+
+        function showNextReview() {
+            currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
+            displayReview(currentReviewIndex);
+        }
+
+        function showPrevReview() {
+            currentReviewIndex = (currentReviewIndex - 1 + reviews.length) % reviews.length;
+            displayReview(currentReviewIndex);
+        }
+
+        // Call the loadReviews function when the page loads
+        document.addEventListener("DOMContentLoaded", loadReviews);
+
+        // Set interval to show next review automatically every 5 seconds
+        setInterval(showNextReview, 5000);
+    </script>
+</body>
+</html>

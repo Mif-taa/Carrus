@@ -1,0 +1,122 @@
+/*about us*/
+main>section:nth-child(2) {
+    position: relative;
+    top: 60vh;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+main>section:nth-child(2)>div:nth-child(2) {
+    position: relative;
+    top: 100px;
+}
+main>section:nth-child(2)>div:nth-child(2)>section {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+main>section:nth-child(2)>div:nth-child(2)>section>aside {
+    width: 300px;
+    height: 150px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 5px;
+    transition: all 2s;
+    position: relative;
+}
+#OUR_SERVICE {
+    font-family: fantasy;
+    font-size: 60px;
+    opacity: 20%;
+    bottom: 20px;
+    position: relative;
+}
+#our_servicee {
+    font-family: sans-serif;
+    font-size: 47px;
+    position: relative;
+    top: 20px;
+    left: 25px;
+}
+main>section:nth-child(2)>div:nth-child(2)>section>aside>div {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 20px;
+    bottom: 30px;
+    gap: 20px;
+}
+main>section:nth-child(2)>div:nth-child(2)>section>aside>h6 {
+    position: absolute;
+    top: 100px;
+    left: 25px;
+}
+
+main>section:nth-child(2)>div:nth-child(2)>section>aside>div>h5 {
+    position: relative;
+    top: 15px;
+    font-family: fantasy;
+
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+.services-section h1 {
+    font-size: 2.5rem;
+    color: #333;
+    position: relative;
+}
+.services-section h1::before {
+    content: 'OUR SERVICES';
+    font-size: 4rem;
+    color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: -40px;
+    left: 0;
+    z-index: -1;
+}
+.services-section p {
+    color: #666;
+}
+/* Service Card Styles */
+.service-card {
+    border-radius: 8px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    background-color: #e3e2e2;
+    
+}
+
+.service-card i {
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Icons */
+.icon-gear::before {
+    content: "\2699";
+    /* Unicode for gear symbol */
+}
+
+.icon-navigation::before {
+    content: "\1F5FA";
+    /* Unicode for map symbol */
+}
+
+.icon-fuel::before {
+    content: "\1F4CA";
+    /* Unicode for bar chart symbol */
+}
+
+.icon-cash::before {
+    content: "\1F4B0";
+    /* Unicode for money bag symbol */
+}

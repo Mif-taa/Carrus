@@ -1,0 +1,22 @@
+.rounded-button {
+    background-color: #1f4e27;
+    color: #fff;
+    /* border:#20562A; */
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px; /* Makes it pill-shaped */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: inline-block;
+}
+
+/* Hover Effect */
+.rounded-button:hover {
+    background-color: white;
+    border-color: #20562A;
+    border-style: ;
+    border: 1px;
+    color: black;
+}

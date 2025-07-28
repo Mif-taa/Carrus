@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Cards</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./caroptions.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+
+    <!-- Navbar -->
+    <nav class="navbar">
+    <div class="navbar-logo">
+       <img src="logo2.png" alt="Logo" class="logo-image">
+    </div>
+    <ul class="navbar-links" id="navbar-links">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#review">Review</a></li>
+    </ul>
+    <div class="hamburger-menu" onclick="toggleMenu()">
+        &#9776;
+    </div>
+    <div class="menu" id="menu">
+        <a href="#" onclick="showSignUp()">Sign Up/Log In</a>
+        <a href="#">FAQs</a>
+        <a href="#">Policies</a>
+        <a href="#">About Us</a>
+        <a href="#">Current Location</a>
+    </div>
+</nav>
+
+    
+    <!-- Choose Car Option -->
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="./selectcarphoto/Hyundai.jpg" alt="Hyundai" class="car-image">
+                    <div class="car-name">Hyundai</div>
+                    <div class="car-specs">
+                        <div>2015</div>
+                        <div>258 HP</div>
+                        <div>Manual</div>
+                    </div>
+                    <button class="btn btn-book w-100">Book Now</button>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="./selectcarphoto/Toyota.png" alt="Toyota Corolla" class="car-image">
+                    <div class="car-name">Toyota Corolla</div>
+                    <div class="car-specs">
+                        <div>2015</div>
+                        <div>258 HP</div>
+                        <div>Manual</div>
+                    </div>
+                    <button class="btn btn-book w-100">Book Now</button>
+                </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="./selectcarphoto/Mitsubishi Pajero.png" alt="Mitsubishi Pajero" class="car-image">
+                    <div class="car-name">Mitsubishi Pajero</div>
+                    <div class="car-specs">
+                        <div>2015</div>
+                        <div>258 HP</div>
+                        <div>Manual</div>
+                    </div>
+                    <button class="btn btn-book w-100">Book Now</button>
+                </div>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="./selectcarphoto/Honda Accord.webp" alt="Honda Accord" class="car-image">
+                    <div class="car-name">Honda Accord</div>
+                    <div class="car-specs">
+                        <div>2015</div>
+                        <div>258 HP</div>
+                        <div>Manual</div>
+                    </div>
+                    <button class="btn btn-book w-100">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-links">
+            <div>
+                <h3>ABOUT US</h3>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div>
+                <h3>SERVICES</h3>
+                <a href="#">Policies</a>
+                <a href="#">FAQs</a>
+            </div>
+            <div>
+                <h3>OTHERS</h3>
+                <a href="#">Terms of Service</a>
+                <a href="#">Current Location</a>
+            </div>
+        </div>
+        <p>© 2024 CARRUS. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

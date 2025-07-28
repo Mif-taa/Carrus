@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Registration</title>
+    <link rel="stylesheet" href="car.css">
+    <link rel="stylesheet" href="driver.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="./logo2.png" alt="Logo" class="logo">
+        </div>
+        <div class="nav-links">
+            <a href="./home.html">Back</a>
+        </div>
+    </nav>
+
+    <div class="row">
+        <!-- Main Form Container -->
+        <div class="container" id="form-container">
+            <h2 id="form-title">Driver Registration</h2>
+            <form id="driver-registration-form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="license-number">License Number</label>
+                    <input type="text" name="licenseNumber" id="license-number" required>
+                </div>
+                <div class="form-group">
+                    <label for="license-class">License Class</label>
+                    <input type="text" name="licenseClass" id="license-class" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Driver List Container -->
+    <div id="drivers-container" class="drivers-list"></div>
+
+    <script src="driver.js"></script>
+</body>
+</html>

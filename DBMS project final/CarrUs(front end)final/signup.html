@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARRUS - Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+     
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+              <img src="logo2.png" alt="Logo" class="logo-image">
+        </div>
+        <div class="nav-links">
+            <a href="./signup.html">Sign Up</a>
+            <a href="./login.html">Log In</a>
+        </div>
+    </nav>
+
+    <!-- Main Form Container -->
+    <div class="container" id="form-container">
+        <h2 id="form-title">Sign Up</h2>
+        <div id="signup-form">
+            <div class="form-group">
+                <label for="signup-name">Name</label>
+                <input type="text" id="signup-name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="signup-phone">Phone</label>
+                <input type="tel" id="signup-phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="signup-email">Email</label>
+                <input type="email" id="signup-email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="signup-address">Address</label>
+                <input type="text" id="signup-address" placeholder="Enter your address" required>
+            </div>
+            <div class="form-group">
+                <label for="signup-nid">NID</label>
+                <input type="text" id="signup-nid" placeholder="Enter your national ID" required>
+            </div>
+            <div class="form-group">
+                <label for="signup-dob">Date of Birth</label>
+                <input type="date" id="signup-dob" required>
+            </div>
+            <div class="form-group">
+                <label for="signup-gender">Gender</label>
+                <select id="signup-gender" required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+           
+            <div class="form-group">
+                <label for="signup-password">Set Password</label>
+                <input type="password" id="signup-password" placeholder="Enter a secure password" required>
+            </div>
+            <button type="button" onclick="registerUser()">Sign Up</button>
+            <div class="toggle-btn">
+                <a href="./login.html">Already have an account? Login</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rent a Car</title>
+  <link rel="stylesheet" href="rent-a-car.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Rent a Car</h1>
+    <p>Get 20% off booking!</p>
+  </header>
+
+  <main class="content">
+    <section class="car-selection">
+      <h2>Select Your Car</h2>
+      <div class="car-options">
+        <label for="car-model">Car Model:</label>
+        <select id="car-model">
+          <option value="sedan" data-price="6000">Sedan - 6000tk/day</option>
+          <option value="suv" data-price="8000">SUV - 8000tk/day</option>
+          <option value="hatchback" data-price="5000">Hatchback - 5000tk/day</option>
+        </select>
+
+        <label for="car-color">Car Color:</label>
+        <select id="car-color">
+          <option value="red">Red</option>
+          <option value="blue">Blue</option>
+          <option value="black">Black</option>
+          <option value="white">White</option>
+        </select>
+      </div>
+      <div class="car-preview">
+        <img id="car-photo" src="default-car.jpg" alt="Car Preview">
+      </div>
+    </section>
+
+    <section class="location-selection">
+      <h2>Pick-Up & Drop-Off</h2>
+      <form id="booking-form">
+        <label for="client-email">Email Address:</label>
+        <input type="email" id="client-email" placeholder="Enter your email" required>
+
+        <label for="pick-up">Pick-Up Location:</label>
+        <input type="text" id="pick-up" placeholder="Enter pick-up location" required>
+
+        <label for="drop-off">Drop-Off Location:</label>
+        <input type="text" id="drop-off" placeholder="Enter drop-off location" required>
+
+        <label for="pick-up-date">Pick-Up Date:</label>
+        <input type="date" id="pick-up-date" required>
+
+        <label for="pick-up-time">Pick-Up Time:</label>
+        <input type="time" id="pick-up-time" required>
+      </form>
+    </section>
+
+    <section class="payment-section">
+      <h2>Payment</h2>
+      <p>Car Price per Day: <span id="car-price">0tk</span></p>
+      <p>Total Days: 
+        <input type="number" id="total-days" min="1" value="1"> 
+      </p>
+      <p>Discount: 20%</p>
+      <p>Total Price: <span id="total-price">0tk</span></p>
+
+      <button id="calculate-price" type="button">Calculate Total Price</button>
+      <button id="pay-now" type="submit">Book Now</button>
+      <button><a href="./newpayment.html">Pay Now</a></button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 CarrUs. All rights reserved.</p>
+  </footer>
+
+  <script src="rent-a-car.js"></script>
+</body>
+</html>

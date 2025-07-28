@@ -1,0 +1,87 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(./car2.webp);;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #307C51;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.navbar-logo img {
+    height: 50px;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links li {
+    display: inline;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+    transition: background 0.3s;
+}
+
+.navbar-links a:hover {
+    background-color: #307C51;
+    border-radius: 5px;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Dropdown Menu */
+.menu {
+    display: none;
+    flex-direction: column;
+    background-color: #307C51;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s;
+}
+
+.menu a:hover {
+    background-color: #307C51;
+    border-radius: 5px;
+}
+
+/* Responsive Styles */
+/* @media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+    }
+    .hamburger-menu {
+        display: block;
+    }
+    .menu.active {
+        display: flex;
+    }
+} */

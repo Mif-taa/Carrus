@@ -1,0 +1,144 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the background image */
+body {
+    background-size: cover;
+    background-position: center;
+   font-family:  'Poppins', Arial, sans-serif; 
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    background-image: url('car2.webp'); /* Replace with your car background image */
+    background-position: center -10px;
+    color: white;
+     padding-top: 30px;
+}
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+   height: calc(185vh - 160px); 
+   /* background-color: rgba(0, 0, 0, 0.4); /* Adjust color and opacity */
+    z-index: -1;
+}
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #307C51;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: bold;
+    align-items: left;
+     font-family: 'Pacifico', cursive;            /* Custom font */
+                             /* Adjust font size */
+  background: linear-gradient(45deg, #e63946, #f1faee); /* Gradient effect */
+  -webkit-background-clip: text;               /* Show gradient on text only */
+  color: #20562A;                          /* Make text transparent for gradient */
+  text-shadow: 5px 5px 0 white, -2px -2px 0 white; /* Outline effect */
+  letter-spacing: 2.5px;                         /* Space between letters */
+  padding: 0 20px; 
+}
+.logo-image{
+    width: 60px; /* Set the desired width */
+    height: 60px;
+}
+.nav-links a {
+    margin-left: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #4cae4c;
+}
+
+/* Sidebar Menu */
+
+/* Container for the form */
+.container {
+    margin-top: calc(60px + 20px);
+    width: 350px;
+    padding: 30px;
+    background:transparent;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+    margin: 100px auto;
+    opacity: 1;
+   
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+}
+
+input[type="text"],
+input[type="username"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 40px;
+    color:black;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #20562A;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition:opacity 0.5s;
+	transition:box-shadow 0.5s;
+}
+
+button:hover {
+
+    background-color: #20562A;
+    box-shadow: 4.5px 4.5px 4.5px rgba(0,0,0,0.7);
+	opacity: 1.6;
+    border:none;
+}
+
+.toggle-btn {
+    text-align: center;
+    margin-top: 15px;
+    cursor: pointer;
+    color: #333;
+}
+

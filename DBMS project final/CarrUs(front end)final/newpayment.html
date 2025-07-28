@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./newpayment.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Payment</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar p-3">
+            <div class="navbar-logo ms-4">
+                <img src="logo2.png" alt="Car Rental Logo" class="logo-image">
+            </div>
+            <ul class="navbar-links" id="primary-navigation">
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./contact.html">Contact us</a></li>          
+            </ul>       
+        </nav>
+    </header>
+    
+
+     <!-- Payment Section -->
+     <div class="container py-5">
+        <h2 class="text-center mb-4">Complete Your Payment</h2>
+        <p class="text-center">Choose your preferred payment method to complete your booking.</p>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <!-- Payment Form -->
+                <form>
+                    
+                    <label class="form-label">Payment Method</label>
+                    <select class="form-select mb-3" id="paymentMethod" name="paymentMethod" required>
+                        <option value="" disabled selected>Select Payment Method</option>
+                        <option value="bkash">bKash</option>
+                        <option value="nagad">Nagad</option>
+                        <option value="rocket">Rocket</option>
+                    </select>
+                
+                    
+                    <div class="mb-3">
+                        <label for="amount" class="form-label">Amount (in BDT)</label>
+                        <input type="number" class="form-control" id="amount" name="amount" placeholder="Enter amount" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="transactionId" class="form-label">Transaction ID</label>
+                        <input type="text" class="form-control" id="transactionId" name="transactionId" placeholder="Enter transaction ID" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="paymentDate" class="form-label">Payment Date</label>
+                        <input type="date" class="form-control" id="paymentDate" name="paymentDate" required>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Confirm Payment</button>
+                </form>
+                
+                
+            </div>
+        </div>
+    </div>
+
+     <!-- Payment History Section -->
+     <div id="payment-history" class="mt-5">
+        <h3 class="text-center">Payment History</h3>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Payment Method</th>
+                    <th>Amount (BDT)</th>
+                    <th>Transaction ID</th>
+                    <th>Payment Date</th>
+                </tr>
+            </thead>
+            <tbody id="payment-list">
+                <!-- Payment data will be displayed here -->
+            </tbody>
+        </table>
+        <div class="text-center">
+            <h4>Total Paid: <span id="total-amount">0</span> BDT</h4>
+        </div>
+    </div>
+</div>
+    <script src="newpayment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

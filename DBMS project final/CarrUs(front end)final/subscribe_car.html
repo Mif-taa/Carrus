@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscribe to a Car</title>
+  <link rel="stylesheet" href="./subscribe_car.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Subscribe to Your Favourite Car</h1>
+    <p>Get 10% off for subscriptions longer than 6 months!</p>
+  </header>
+
+  <main class="content">
+    <section class="car-selection">
+      <h2>Select Your Car</h2>
+      <div class="car-options">
+        <label for="car-category">Car Category:</label>
+        <select id="car-category"></select>
+
+        <label for="car-make">Car Make:</label>
+        <select id="car-make"></select>
+
+        <label for="car-model">Car Model:</label>
+        <select id="car-model"></select>
+
+        <div class="car-preview">
+          <img id="car-photo" src="default-car.jpg" alt="Car Preview">
+        </div>
+      </div>
+    </section>
+
+    <section class="client-info">
+      <form id="subscription-form">
+        <label for="client-location">Your Current Location:</label>
+        <input type="text" id="client-location" placeholder="Enter your location" required>
+
+        <label for="subscription-duration">Subscription Duration (Months):</label>
+        <input type="number" id="subscription-duration" min="1" value="1" required>
+      </form>
+    </section>
+
+    <section class="payment-section">
+      <h2>Payment</h2>
+      <p>Car Price per Month: <span id="car-price">0tk</span></p>
+      <p>Subscription Duration: <span id="duration">1 month</span></p>
+      <p>Discount: <span id="discount">0%</span></p>
+      <p>Total Price: <span id="total-price">0tk</span></p>
+
+      <button id="calculate-price" type="button">Calculate Total Price</button>
+      <button id="subscribe-now" type="button">Subscribe Now</button>
+      <button><a href="./newpayment.html">Pay Now</a></button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 CarrUs. All rights reserved.</p>
+  </footer>
+
+  <script src="subscribe_car.js"></script>
+</body>
+</html>

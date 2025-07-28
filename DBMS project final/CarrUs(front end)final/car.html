@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Registration</title>
+    <link rel="stylesheet" href="car.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="./logo2.png" alt="Logo" class="logo">
+        </div>
+        <div class="nav-links">
+            <a href="./home.html">Back</a>
+        </div>
+    </nav>
+
+    <div class="row">
+        <!-- Main Form Container for Car -->
+        <div class="container" id="form-container">
+            <h2 id="form-title">Car Registration</h2>
+            <form id="car-registration-form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="registration-number">Registration Number</label>
+                    <input type="text" id="registration-number" name="registrationNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <input type="text" id="category" name="category" required>
+                </div>
+                <div class="form-group">
+                    <label for="seat-capacity">Seat Capacity</label>
+                    <input type="number" id="seat-capacity" name="seatCapacity" required>
+                </div>
+                <div class="form-group">
+                    <label for="make">Make</label>
+                    <input type="text" id="make" name="make" required>
+                </div>
+                <div class="form-group">
+                    <label for="year">Year</label>
+                    <input type="text" id="year" name="year" required>
+                </div>
+                <div class="form-group">
+                    <label for="model">Model</label>
+                    <input type="text" id="model" name="model" required>
+                </div>
+                <input type="hidden" id="user-id" name="userId">
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Car Details Section -->
+    <div class="container">
+        <h2>Registered Cars</h2>
+        <button id="load-cars">Load Registered Cars</button>
+        <div id="cars-list"></div>
+    </div>
+
+    <script src="car.js"></script>
+</body>
+</html>

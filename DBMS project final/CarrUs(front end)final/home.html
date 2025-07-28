@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental & Ride Sharing System</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="./service.css">
+    <link rel="stylesheet" href="./slide.css">
+    <link rel="stylesheet" href="./reviewform.css">
+    <link rel="stylesheet" href="./FAQ.css">
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./button.css">
+    <link rel="stylesheet" href="./client.css">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            
+            <img class="ms-5 logo" src="./logo2.png"></img>
+            <nav>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+        
+                </div>
+                <ul class="nav-list">
+                    <li><a href="./aboutus.html">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="./contact.html">Contact us</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="./review.html">Review</a></li>
+                    <li><a href="./newpayment.html">Payment</a></li>
+                    <li><a href="./profile.html">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+
+        <div class="row ms-2">
+            <div class="col-6 headstyle">
+                <div class="mt-5">
+                    <h1>Your Journey Starts Here</h1>
+                </div>
+                <div>
+                    <p>Explore our range of vehicles or book a ride with just a click!</p>
+                </div>
+            </div>
+            
+        </div>      
+    </section>
+ 
+    <!--client section-->   
+    <div id="services"></div>
+    <section class="services-section container my-5">
+
+        <div class="row">
+            <div class="col-lg-4 mt-4">
+                <h1 class="display-4 font-weight-bold pb-4">Our Services</h1>
+                <p class="mt-4">We are offering a variety of cars, services, and partnerships to meet all your travel
+                    needs.</p>
+            </div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <!-- Personal Driver Service -->
+                    <div class="col-md-4 col-lg-6 mb-4">
+                        <div class="service-card p-4 text-center shadow-sm">
+                            <img src="./servicesPhoto/repair-tool.png" width="50">
+                            <h5 class="font-weight-bold">Work as driver</h5>
+                            <p>Join us and get your salary</p>
+                        </div>
+                    </div>
+
+                    <!-- Car Subscription Service -->
+                    <div class="col-md-4 col-lg-6 mb-4">
+                        <div class="service-card p-4 text-center shadow-sm">
+                            <img src="./servicesPhoto/shield.png" width="50">
+                            <h5 class="font-weight-bold">Car subscription</h5>
+                            <p>Subscribe car for a long duration</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <!-- Lend Service -->
+                    <div class="col-md-4 col-lg-6 mb-4">
+                        <div class="service-card p-4 text-center shadow-sm">
+                            <img src="./servicesPhoto/interest-rate.png" width="50">
+                            <h5 class="font-weight-bold">Lend Cars</h5>
+                            <p>Lend your cars and earn profit</p>
+                        </div>
+                    </div>
+
+                    <!-- Easy Cash Service -->
+                    <div class="col-md-4 col-lg-6 mb-4">
+                        <div class="service-card p-4 text-center shadow-sm">
+                            <img src="./servicesPhoto/fleet-management.png" width="50">
+                            <h5 class="font-weight-bold">Rent cars</h5>
+                            <p>Rent cars for regular basis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+        </div>
+    </section>
+    <!--Registration form-->
+    <div class="row">
+
+    </div>
+    <section>
+        <section class="client" id="client">
+            <h2>Get our Services now</h2>
+            <ul>
+                <!-- <li><a href="profile.html">Update or view Profile</a></li> -->
+                <li><a href="rentcarnew.html">Rent a car?</a></li>
+                <li><a href="./subscribe_car.html">Car subscription?</a></li>
+                <li><a href="./driver.html">Work as Driver?</a></li>
+                <li><a href="./car.html">Lend your car?</a></li>
+            </ul>
+        </section>
+    </section>
+    <!--Customer review-->
+    <div id="review"></div>
+    <section class="reviews">
+        <div class="container mt-5 mb-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class="container py-5">
+                        <h2 class="text-center mb-4">What Our Customers say</h2>
+                        <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <!-- Review 1 -->
+                                <div class="carousel-item active">
+                                    <div class="review-card">
+                                        <p class="review-text">"Great experience! The car was in perfect condition, and the
+                                            service
+                                            was excellent. Will definitely rent again!"</p>
+                                        <div class="reviewer-name">John Doe</div>
+                                        <div class="reviewer-location">Los Angeles, CA</div>
+                                    </div>
+                                </div>
+                                <!-- Review 2 -->
+                                <div class="carousel-item">
+                                    <div class="review-card">
+                                        <p class="review-text">"Amazing selection of cars and very affordable prices. The
+                                            booking
+                                            process was seamless."</p>
+                                        <div class="reviewer-name">Jane Smith</div>
+                                        <div class="reviewer-location">New York, NY</div>
+                                    </div>
+                                </div>
+                                <!-- Review 3 -->
+                                <div class="carousel-item">
+                                    <div class="review-card">
+                                        <p class="review-text">"The customer support team was very helpful in answering all
+                                            my
+                                            questions. Highly recommended!"</p>
+                                        <div class="reviewer-name">Mike Johnson</div>
+                                        <div class="reviewer-location">Miami, FL</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Carousel Controls -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="container d-flex flex-row-reverse p-5 m-5"><button class="mr-5"><a class="ms-5 mr-5"href="./review.html">Add review</a></button></div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </section>
+    <!--faq section starts here-->
+    <div id="faq"></div>
+    <section class="faqs">
+        <div class="container mt-5 mb-5">
+            <h2 class="faq-header">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="row">
+                 <div class="col-6">
+                     <!-- FAQ Item 1 -->
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link faq-question" type="button" data-toggle="collapse"
+                                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Who are we?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            We are a premium car rental service offering a wide range of vehicles for all your travel needs.
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- FAQ Item 2 -->
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed faq-question" type="button" data-toggle="collapse"
+                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                How do we work with you?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            We provide easy booking options and personalized customer support to ensure a smooth rental
+                            experience.
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- FAQ Item 3 -->
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed faq-question" type="button" data-toggle="collapse"
+                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Do you offer insurance options?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Yes, we offer comprehensive insurance options to cover your rental period.
+                        </div>
+                    </div>
+                </div>
+    
+                 </div>
+                 <div class="col-6">
+                     <!-- FAQ Item 4 -->
+                <div class="card">
+                    <div class="card-header" id="headingFour">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link faq-question" type="button" data-toggle="collapse"
+                                data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Who are we?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            We are a premium car rental service offering a wide range of vehicles for all your travel needs.
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- FAQ Item 5 -->
+                <div class="card">
+                    <div class="card-header" id="headingFive">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed faq-question" type="button" data-toggle="collapse"
+                                data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                How do we work with you?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            We provide easy booking options and personalized customer support to ensure a smooth rental
+                            experience.
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- FAQ Item 6 -->
+                <div class="card">
+                    <div class="card-header" id="headingSix">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed faq-question" type="button" data-toggle="collapse"
+                                data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                Do you offer insurance options?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Yes, we offer comprehensive insurance options to cover your rental period.
+                        </div>
+                    </div>
+                </div>
+                 </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features">
+        <div class="feature">
+            <h2>Wide Selection of Cars</h2>
+            <p>Choose from a variety of vehicles to meet your needs.</p>
+        </div>
+        <div class="feature">
+            <h2>Car subscription</h2>
+            <p>Subscribes car and save on costs.</p>
+        </div>
+        <div class="feature">
+            <h2>Affordable Prices</h2>
+            <p>Competitive rates with no hidden fees.</p>
+        </div>
+        <div class="feature">
+            <h2>24/7 Support</h2>
+            <p>We're here to assist you anytime, day or night.</p>
+        </div>
+    </section>
+
+    <!--footer start here-->
+    <footer>
+        <p>&copy; 2024 Car Rental System.</p>
+    </footer>
+    <!--footer end here-->
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const mobileMenu = document.getElementById("mobile-menu");
+        const navList = document.querySelector(".nav-list");
+        mobileMenu.addEventListener("click", () => {
+            navList.classList.toggle("active");
+        });
+    </script>
+
+</body>
+
+</html>

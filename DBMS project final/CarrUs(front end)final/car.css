@@ -1,0 +1,162 @@
+/* car.css and driver.css (Same as login.css) */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the background image */
+body {
+    background-size: cover;
+    background-position: center;
+    font-family: 'Poppins',Arial, sans-serif;
+    position: relative;
+    font-weight: bold;
+    background-image: url('./car2.webp'); /* Replace with your car background image */
+    background-position: center -10px;
+    background-attachment: fixed;
+    /* color: white; */
+    overflow-x: hidden; /* Hide horizontal scrolling */
+    overflow-y: auto; /* Allow vertical scrolling */
+    min-height: 100vh;
+    opacity:1.5; /* Ensure the body takes at least the full height of the viewport */
+}
+
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #307C51;
+    color: #fff;
+    padding: 15px 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.logo{
+    height: 62px;
+    width: 62px;
+    /* border-radius: 30px; */
+    background-size: cover;
+    margin-left: 50px;
+}
+
+.nav-links a {
+    margin-left: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #757c75;
+}
+
+/* Container for the form */
+.container {
+    margin-top: 120px; /* Increased to make room for fixed navbar */
+    margin-bottom: 80px;
+    width: 500px;
+    padding: 30px;
+    background: rgb(222, 232, 226);
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+    margin: 100px auto;
+    margin-top: 150px;
+    
+    animation-name: swoosh;
+    animation-duration: 1.5s;
+    animation-delay: 0.5s;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 40px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 40px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #20562A;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: opacity 0.5s;
+    transition: box-shadow 0.5s;
+}
+
+button:hover {
+    background-color: #20562A;
+    box-shadow: 4.5px 4.5px 4.5px rgba(0, 0, 0, 0.7);
+    opacity: 1.6;
+    border: none;
+}
+
+.toggle-btn {
+    text-align: center;
+    margin-top: 15px;
+    cursor: pointer;
+    color: #333;
+}
+footer {
+    background: #307C51;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Other styles remain unchanged */
+
+/* Preview image container */
+
+.car-photo {
+    width: 150px; /* Fixed width */
+    height: 100px; /* Fixed height for consistent preview */
+    object-fit: cover; /* Crop the image to fit */
+    border-radius: 10px; /* Optional: Rounded edges */
+    margin-top: 10px; /* Add spacing */
+}
+.driver-photo {
+    width: 150px; /* Fixed width */
+    height: 100px; /* Fixed height for consistent preview */
+    object-fit: cover; /* Crop the image to fit */
+    border-radius: 10px; /* Optional: Rounded edges */
+    margin-top: 10px; /* Add spacing */
+}

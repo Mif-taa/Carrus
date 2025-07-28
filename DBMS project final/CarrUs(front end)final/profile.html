@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="logo2.png" alt="Logo" class="logo-image">
+        </div>
+        <div class="nav-links">
+            <a href="./profile.html">Profile</a>
+            <a href="./home.html">Home</a>
+            <a href="./login.html">Logout</a>
+        </div>
+    </nav>
+
+    <!-- Main Profile Section -->
+    <div class="container" id="profile-container">
+        <h2 id="profile-title">User Profile</h2>
+        
+        <!-- User Information -->
+        <div id="user-info">
+            <p><strong>Name: </strong><span id="user-name"></span></p>
+            <p><strong>Email: </strong><span id="user-email"></span></p>
+            <p><strong>Phone: </strong><span id="user-phone"></span></p>
+            <p><strong>Address: </strong><span id="user-address"></span></p>
+            <p><strong>NID: </strong><span id="user-nid"></span></p>
+            <p><strong>Date of Birth: </strong><span id="user-dob"></span></p>
+            <p><strong>Gender: </strong><span id="user-gender"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // Fetch user info using the stored userId
+        window.addEventListener("DOMContentLoaded", async () => {
+            const userId = localStorage.getItem("userId");
+
+            if (!userId) {
+                alert("Please log in first!");
+                window.location.href = "./login.html"; // Redirect to login if no user is logged in
+                return;
+            }
+
+            try {
+                // Fetch user data from the backend API
+                const response = await fetch(`http://localhost:8080/api/users/${userId}`);
+                
+                if (response.ok) {
+                    const user = await response.json();
+
+                    // Display user information
+                    document.getElementById("user-name").innerText = user.name;
+                    document.getElementById("user-email").innerText = user.email;
+                    document.getElementById("user-phone").innerText = user.phone;
+                    document.getElementById("user-address").innerText = user.address;
+                    document.getElementById("user-nid").innerText = user.nid;
+                    document.getElementById("user-dob").innerText = user.dob;
+                    document.getElementById("user-gender").innerText = user.gender;
+
+                } else {
+                    alert("Failed to fetch user data.");
+                }
+            } catch (error) {
+                console.error("Error fetching user data:", error);
+                alert("An error occurred while fetching your profile.");
+            }
+        });
+    </script>
+
+</body>
+</html>

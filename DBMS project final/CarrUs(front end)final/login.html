@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARRUS</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="logo2.png" alt="Logo" class="logo-image">
+        </div>
+        <div class="nav-links">
+            <a href="./signup.html" onclick="showSignUp()">Sign Up</a>
+            <a href="./login.html" onclick="showLogin()">Log In</a>
+        </div>
+    </nav>
+
+    <!-- Main Form Container -->
+    <div class="container" id="form-container">
+        <h2 id="form-title">Login</h2>
+
+        <!-- Login Form -->
+        <div id="login-form">
+            <div class="form-group">
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" required>
+            </div>
+
+            <!-- Login Button triggers loginUser function -->
+            <button onclick="loginUser()">Login</button>
+
+            <div class="toggle-btn" onclick="showSignUp()">Don't have an account? Sign Up</div>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div id="signup-form" style="display: none;">
+            <div class="form-group">
+                <label for="signup-email">Email</label>
+                <input type="email" id="signup-email" required>
+            </div>
+            <div class="form-group">
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" required>
+            </div>
+            <!-- Sign Up Button triggers signupUser function -->
+            <button onclick="signupUser()">Sign Up</button>
+
+            <div class="toggle-btn" onclick="showLogin()">Already have an account? Login</div>
+        </div>
+    </div>
+
+    <script src="./login.js"></script>
+</body>
+</html>
